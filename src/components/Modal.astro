@@ -1,0 +1,31 @@
+---
+import Close from 'astro-heroicons/outline/XCircle.astro';
+---
+
+<div x-data="{open: false}">
+    <button @click="open = true"
+            class="px-5 py-3 bg-white rounded shadow">Ouvrir la modal</button>
+    <div x-show="open"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-out duration-300"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         class="fixed inset-0 grid place-items-center p-4 bg-black bg-opacity-50">
+      <div class="w-full max-w-3xl p-5 bg-white rounded shadow">
+        <div class="flex justify-between items-center mb-5 pb-2 border-b">
+          <h3 class="m-0 text-xl font-semibold">Boujour Modal!</h3>
+          <button @click="open = false"
+                  class="py-3">
+            <Close class="w-8 h-8"/>
+          </button>
+        </div>
+        <div>
+          <p class="my-4 leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque magnam rerum minus velit tempora consectetur non id veniam. Amet pariatur reiciendis aut explicabo repellendus deleniti adipisci a excepturi tenetur.</p>
+          <p class="my-4 leading-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit earum pariatur saepe praesentium cum laboriosam blanditiis ipsam sapiente, rem ipsa accusamus maxime autem quibusdam, eius suscipit eligendi! Odit, corrupti sunt.</p>
+          <p class="my-4 leading-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum dolorum ipsa alias tempore est, corporis labore exercitationem rerum expedita voluptatibus maxime quod inventore sequi facere quidem quisquam fuga aperiam laboriosam!</p>
+        </div>
+      </div>
+    </div>
+</div>
