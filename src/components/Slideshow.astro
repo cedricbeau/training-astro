@@ -1,6 +1,7 @@
 ---
-import CarouselNext from '@components/Button.astro';
-import CarouselPrev from '@components/Button.astro';
+import Next from '@components/Button.astro';
+import Prev from '@components/Button.astro';
+import Dots from '@components/Button.astro';
 import ArrowLeftCircle from 'astro-heroicons/micro/ArrowLeftCircle.astro';
 import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
 ---
@@ -47,7 +48,7 @@ import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
         })
     },
 
-    prevHandler() {
+    prev() {
         if (this.currentIndex == 0) {
             this.switchToIndex(this.slides.length - 1);
         } else {
@@ -55,7 +56,7 @@ import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
         }
     },
 
-    nextHandler() {
+    next() {
         if (this.currentIndex == this.slides.length - 1) {
             this.switchToIndex(0);
         } else {
@@ -63,7 +64,7 @@ import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
         }
     },
 
-    dotHandler(index) {
+    dots(index) {
         this.currentIndex = index;
 
         if (this.currentIndex == 0) {
@@ -77,19 +78,19 @@ import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
         } else {
             this.switchToIndex(this.currentIndex + 1);
         }
-    },
-
-    init() {
-        this.switchToIndex(this.currentIndex);
     }
 }"
     class="relative overflow-hidden flex flex-col items-center w-fit mx-auto px-8">
-    <CarouselPrev @click="prevHandler()" class="absolute top-1/2 left-0 -translate-y-1/2">
+    <Prev @click="prev()"
+                  class="absolute top-1/2 left-0 -translate-y-1/2"
+                  :text="Slide précédente">
         <ArrowLeftCircle class="w-6 h-6"/>
-    </CarouselPrev>
-    <CarouselNext @click="nextHandler()" class="absolute top-1/2 right-0 -translate-y-1/2">
+    </Prev>
+    <Next @click="next()"
+                  class="absolute top-1/2 right-0 -translate-y-1/2"
+                  :text="Slide suivante">
         <ArrowRightCircle class="w-6 h-6"/>
-    </CarouselNext>
+    </Next>
     <div>
         <template x-for="(slide, index) in slides" :key="index">
             <div x-show="slide.isVisible">
@@ -103,10 +104,10 @@ import ArrowRightCircle from 'astro-heroicons/micro/ArrowRightCircle.astro';
     <ul class="flex justify-center">
         <template x-for="(slide, index) in slides" :key="index">
             <li class="mx-0.5">
-                <button class="w-4 h-4 rounded-full"
-                        :class="slide.isVisible ? 'bg-slate-800' : 'bg-slate-400'"
-                        :text="index"
-                        @click="dotHandler(index)"></button>
+                <Dots class="w-4 h-4 rounded-full"
+                             @click="dots(index)"
+                             :class="slide.isVisible ? 'bg-slate-600' : 'bg-slate-300'"
+                             :text="index" />
             </li>
         </template>
     </ul>
