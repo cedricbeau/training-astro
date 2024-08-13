@@ -1,0 +1,59 @@
+---
+import ChevronDown from 'astro-heroicons/micro/ChevronDown.astro';
+import ChevronUp from 'astro-heroicons/micro/ChevronUp.astro';
+---
+
+<div x-data="{
+        items: [
+            {
+            id: 1,
+            isOpen: true,
+            question: 'Question 1',
+            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim tellus odio, at gravida felis posuere nec. Suspendisse commodo nisi a libero tristique euismod. Nulla in malesuada justo, in accumsan neque. In mattis at sapien nec eleifend. Duis luctus neque quis lacinia vulputate. Donec fermentum tortor nibh, eu dignissim mi bibendum ut. In sit amet orci interdum, ultrices sem sed, ornare nulla. Proin blandit eros ut mauris finibus sollicitudin. Nam in ligula ac metus tincidunt eleifend. Sed congue tincidunt dolor id ultricies. Proin non massa sodales, hendrerit felis nec, volutpat ligula. Sed ac leo sagittis, ultricies turpis sed, sollicitudin velit. In ornare scelerisque nisi, id volutpat nunc suscipit ut. Fusce mauris metus, ornare at iaculis nec, posuere at augue. Morbi ultricies imperdiet arcu, at sollicitudin lacus consectetur a. Phasellus non finibus erat.'
+            },
+            {
+            id: 2,
+            isOpen: false,
+            question: 'Question 2',
+            answer: 'Ut egestas ut enim ac sagittis. Quisque posuere fermentum dolor, vel ultricies massa porttitor faucibus. Suspendisse blandit velit at vulputate iaculis. Etiam lacinia orci ut maximus hendrerit. Nulla in sollicitudin sapien. Nam pulvinar, orci sed iaculis feugiat, velit ipsum ultrices elit, id pellentesque ligula erat et diam. Ut varius blandit mi at congue. Praesent at tempor dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras imperdiet, sapien non rhoncus consectetur, mi turpis lobortis erat, id fermentum enim orci vitae nisl. Mauris maximus ex vitae dapibus tincidunt. Sed gravida et dolor et luctus.'
+            },
+            {
+            id: 3,
+            isOpen: false,
+            question: 'Question 3',
+            answer: 'Praesent lobortis, nunc at bibendum viverra, risus lacus volutpat orci, at tempus mauris tortor non dolor. Vivamus congue, tortor ut efficitur placerat, eros lorem ultrices magna, at sodales mi purus vel libero. Vestibulum et venenatis libero. Phasellus tristique pretium enim, tempor fringilla ante venenatis ut. In vel quam sed arcu blandit dictum. Pellentesque et leo bibendum, efficitur ligula in, facilisis justo. Morbi molestie sed est vitae varius. Sed ornare feugiat arcu at gravida.'
+            },
+            {
+            id: 4,
+            isOpen: false,
+            question: 'Question 4',
+            answer: 'Nullam quis lorem libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum tellus in ex sagittis, a efficitur dui malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam non quam tincidunt, mollis elit ac, elementum ex. Pellentesque a tortor est. Suspendisse faucibus odio tincidunt gravida pharetra. Vivamus interdum purus ac dictum cursus. Mauris molestie non dolor id viverra. Aenean facilisis justo ut eros condimentum iaculis. Mauris id dui vel erat bibendum euismod vitae vitae est. Donec venenatis est elit, at pretium dui feugiat vel. Donec tempus viverra leo, ut interdum ipsum gravida quis. Integer mattis elit sed mauris consequat, ut tincidunt enim porttitor. Aliquam erat volutpat.'
+            },
+            {
+            id: 5,
+            isOpen: false,
+            question: 'Question 5',
+            answer: 'Vestibulum pretium accumsan faucibus. Aliquam porttitor lorem augue, sed finibus justo auctor nec. Sed facilisis tortor diam, non volutpat nisi venenatis eu. Nam rhoncus purus est, at finibus erat laoreet at. Sed auctor ante id eros imperdiet, in fermentum felis posuere. Ut tristique magna id tellus iaculis, vel ullamcorper sapien tempus. Sed elit quam, convallis id nulla at, efficitur laoreet lorem'
+            }
+        ]
+     }"
+     class="w-full">
+    <template x-for="item in items" :key="item.id">
+      <div>
+        <button @click="item.isOpen = !item.isOpen"
+                class="flex items-center justify-between w-full p-4 mt-2 text-left bg-white">
+          <span x-text="item.question" class="font-semibold"></span>
+          <span x-show="item.isOpen === false">
+            <ChevronDown class="w-6 h-6" />
+          </span>
+          <span x-show="item.isOpen === true">
+            <ChevronUp class="w-6 h-6" />
+          </span>
+        </button>
+        <div x-show="item.isOpen"
+             x-text="item.answer"
+             class="p-4 leading-normal bg-white border-t border-slate-100">
+        </div>
+      </div>
+    </template>
+  </div>

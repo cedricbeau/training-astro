@@ -6,6 +6,7 @@ import HeroBannerRight from '@components/HeroBannerRight.astro';
 import HeroBannerCenter from '@components/HeroBannerCenter.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
 import ComponentList from '@components/ComponentList.astro';
+import Accordion from '@components/Accordion.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -45,5 +46,8 @@ import ComponentList from '@components/ComponentList.astro';
                               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
         </ComponentContainer>
 
+        <ComponentContainer id="accordion" title="Accordion">
+            <Accordion />
+        </ComponentContainer>
     </main>
 </Layout>
