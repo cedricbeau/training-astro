@@ -1,0 +1,44 @@
+---
+---
+
+<div x-data="{
+        currentTab: 0,
+        tabz: [
+            {
+                id: 1,
+                title: 'Item 1',
+                content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque mollitia unde adipisci dicta, libero repellat eaque non accusantium. Quam delectus sint ratione? Asperiores expedita repellendus incidunt optio et neque voluptatem!'
+            },
+            {
+                id: 2,
+                title: 'Item 2',
+                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ab corrupti vitae placeat sint aliquam ipsum? Itaque velit commodi, eum quibusdam labore sit nobis aliquid tenetur error, nemo, pariatur suscipit!'
+            },
+            {
+                id: 3,
+                title: 'Item 3',
+                content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde tempore ea neque commodi incidunt quaerat odit error enim temporibus! Voluptatibus, voluptates optio sapiente suscipit non eos nemo exercitationem consequatur quidem!'
+            },
+            {
+                id: 4,
+                title: 'Item 4',
+                content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At id ratione, natus quae ea quo aspernatur sit eum voluptate? Dolor, commodi in! Dolores consequuntur sint quas. Praesentium, quo quam. Vero.'
+            },
+        ],
+    }">
+    <ul class="flex">
+        <template x-for="(tab, index) in tabz" :key="index">
+            <li>
+                <button @click="currentTab = index"
+                        class="px-5 py-3 rounded-t"
+                        :class="currentTab === index ? 'bg-white' : ''"
+                        x-text="tab.title"></button>
+            </li>
+        </template>
+    </ul>
+    <template x-for="(tab, index) in tabz" :key="index">
+        <div x-show="currentTab === index" class="p-5 bg-white rounded-b">
+            <p class="leading-normal" x-text="tab.content"></p>
+        </div>
+    </template>
+</div>
