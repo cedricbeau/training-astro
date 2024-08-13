@@ -1,10 +1,11 @@
 ---
-const {"@click": click, "class": buttonClass, "label": label } = Astro.props;
+const {"@click": click, "class": buttonClass, ":class": dynamicClass, ":text": label } = Astro.props;
 ---
 
 <button type="button"
         @click={click}
-        class={buttonClass}>
-    <span class="sr-only">{label}</span>
+        class={buttonClass}
+        :class={dynamicClass}>
+    <span class="sr-only" :text={label}></span>
     <slot/>
 </button>
