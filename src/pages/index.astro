@@ -5,25 +5,13 @@ import HeroBannerLeft from '@components/HeroBannerLeft.astro';
 import HeroBannerRight from '@components/HeroBannerRight.astro';
 import HeroBannerCenter from '@components/HeroBannerCenter.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
+import ComponentList from '@components/ComponentList.astro';
 ---
 
 <Layout title="Welcome to Astro.">
     <div class="fixed top-0 bottom-0 left-0 overflow-Y-auto w-80 p-8 bg-slate-900 text-slate-100">
         <h1 class="mb-8 text-2xl font-bold">Composants</h1>
-        <ul class="space-y-3">
-            <li class="mb-2 pb-2 border-b border-slate-500">
-                <a href="#slideshow">Slideshow</a>
-            </li>
-            <li class="mb-2 pb-2 border-b border-slate-500">
-                <a href="#herobannerleft">Hero Banner Left</a>
-            </li>
-            <li class="mb-2 pb-2 border-b border-slate-500">
-                <a href="#herobannerright">Hero Banner Right</a>
-            </li>
-            <li class="mb-2 pb-2 border-b border-slate-500">
-                <a href="#herobannercenter">Hero Banner Center</a>
-            </li>
-        </ul>
+        <ComponentList />
     </div>
     <main class="max-w-5xl ml-80 p-8">
         <ComponentContainer id="slideshow" title="Slideshow">
