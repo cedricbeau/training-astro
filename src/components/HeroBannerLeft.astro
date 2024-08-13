@@ -1,0 +1,15 @@
+---
+const { src, alt, width, height, title, body } = Astro.props;
+---
+
+<div class="relative">
+    <img src={src}
+         alt={alt}
+         width={width}
+         height={height}
+         class="block max-w-full h-auto">
+    <div class="absolute inset-0 flex flex-col justify-center p-8 bg-black bg-opacity-45 text-white">
+        <div class="mb-4 text-2xl font-bold">{title}</div>
+        <div class="text-lg">{body}</div>
+    </div>
+</div>
