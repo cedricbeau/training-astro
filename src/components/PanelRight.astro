@@ -1,0 +1,26 @@
+---
+import Burger from 'astro-heroicons/outline/Bars3.astro';
+import Close from 'astro-heroicons/outline/XCircle.astro';
+---
+
+<div x-data="{isOpen: false}">
+    <button @click="isOpen = true">
+      <Burger class="w-8 h-8" />
+    </button>
+    <sidebar x-show="isOpen"
+             class="fixed inset-y-0 right-0 max-w-xs p-5 bg-white"
+             :class="isOpen === true ? 'open' : 'closed'"
+             x-transition:enter="transition duration-500 ease-in-out"
+             x-transition:enter-start="transform translate-x-full"
+             x-transition:enter-end="transform -translate-x-0"
+             x-transition:leave="transition duration-500 ease-in-out"
+             x-transition:leave-start="transform -translate-x-0"
+             x-transition:leave-end="transform translate-x-full">
+      <button @click="isOpen = false"
+              @click.away="isOpen = false">
+              <Close class="w-8 h-8"/>
+      </button>
+      <p class="my-5 leading-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, blanditiis, rerum necessitatibus quia sed perferendis quo enim repudiandae eaque aliquid odit repellendus! Assumenda cum temporibus rerum explicabo unde, debitis quam! </p>
+      <p class="leading-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti soluta est, ratione possimus voluptatibus dolorem doloribus iure molestiae ab! Quas suscipit ab hic itaque vitae, obcaecati deleniti ipsam adipisci error?</p>
+    </sidebar>
+</div>

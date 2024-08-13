@@ -9,6 +9,8 @@ import ComponentList from '@components/ComponentList.astro';
 import Accordion from '@components/Accordion.astro';
 import Tabz from '@components/Tabz.astro';
 import Modal from '@components/Modal.astro';
+import PanelLeft from '@components/PanelLeft.astro';
+import PanelRight from '@components/PanelRight.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -58,6 +60,14 @@ import Modal from '@components/Modal.astro';
 
         <ComponentContainer id="modal" title="Modal">
             <Modal />
+        </ComponentContainer>
+
+        <ComponentContainer id="panelleft" title="Panel Left">
+            <PanelLeft />
+        </ComponentContainer>
+
+        <ComponentContainer id="panelright" title="Panel Right">
+            <PanelRight />
         </ComponentContainer>
     </main>
 </Layout>
