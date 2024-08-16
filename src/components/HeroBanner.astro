@@ -10,9 +10,9 @@ const { "data-position": position, src, alt, width, height, title, body, linkHre
          height={height}
          class="block max-w-full h-auto">
     <div class="hero-banner-container absolute inset-0 flex flex-col justify-center p-8 bg-black bg-opacity-45 text-white text-center">
-        <div class="text-2xl font-bold">{title}</div>
-        <div class="mt-6 mb-8 text-lg">{body}</div>
-        <a href={linkHref} title={linkTitle} class="w-fit py-1.5 px-4 bg-slate-100 text-lg  text-slate-700 rounded-sm">{linkLabel}</a>
+        <div class="text-3xl font-bold">{title}</div>
+        <p class="max-w-xl mt-6 mb-8 text-lg">{body}</p>
+        <a href={linkHref} title={linkTitle} class="w-fit py-1.5 px-4 text-lg font-bold text-slate-100 border border-slate-100 rounded-sm hover:bg-slate-100 hover:text-slate-900 transition-all duration-300">{linkLabel}</a>
     </div>
 </div>
 
@@ -20,11 +20,9 @@ const { "data-position": position, src, alt, width, height, title, body, linkHre
     [data-position="center"] > .hero-banner-container {
         @apply items-center text-center;
     }
-
     [data-position="start"] > .hero-banner-container {
         @apply items-start text-start;
     }
-
     [data-position="end"] > .hero-banner-container {
         @apply items-end text-end;
     }
