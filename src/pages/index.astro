@@ -3,20 +3,39 @@ import Layout from '@layouts/Layout.astro';
 import Slideshow from '@components/Slideshow.astro';
 import HeroBanner from '@components/HeroBanner.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
-import ComponentList from '@components/ComponentList.astro';
+import ComponentsList from '@components/ComponentsList.astro';
 import Accordion from '@components/Accordion.astro';
 import Tabz from '@components/Tabz.astro';
 import Modal from '@components/Modal.astro';
 import PanelLeft from '@components/PanelLeft.astro';
 import PanelRight from '@components/PanelRight.astro';
+import Alert from '@components/Alert.astro';
 ---
 
 <Layout title="Astro training">
     <div class="fixed top-0 bottom-0 left-0 overflow-y-auto w-80 p-8 bg-slate-900 text-slate-100">
         <h1 class="mb-8 text-2xl font-bold">Composants</h1>
-        <ComponentList />
+        <ComponentsList />
     </div>
     <main class="max-w-5xl ml-80 p-8">
+        <ComponentContainer id="alert" title="Alert">
+            <Alert data-type="success"
+                   title="Success !"
+                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+
+            <Alert data-type="danger"
+                   title="Danger !"
+                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+
+            <Alert data-type="warning"
+                   title="Warning !"
+                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+
+            <Alert data-type="info"
+                   title="Info !"
+                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+        </ComponentContainer>
+
         <ComponentContainer id="slideshow" title="Slideshow">
             <Slideshow />
         </ComponentContainer>

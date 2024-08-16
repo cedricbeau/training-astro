@@ -1,0 +1,83 @@
+---
+import Success from 'astro-heroicons/outline/CheckCircle.astro';
+import Danger from 'astro-heroicons/outline/ShieldExclamation.astro';
+import Warning from 'astro-heroicons/outline/ExclamationTriangle.astro';
+import Info from 'astro-heroicons/outline/InformationCircle.astro';
+const {"data-type": alertType, title, message} = Astro.props;
+---
+
+<div x-data="{
+        successType: false,
+        dangerType: false,
+        warningType: false,
+        infoType: false,
+
+        init() {
+            this.alertType();
+        },
+
+        alertType() {
+            const p = new Proxy($refs, {
+                get (target, prop) {
+                    return Reflect.get(...arguments)
+                }
+            })
+
+            const alertValue = p.alert.getAttribute('data-type');
+
+            switch (alertValue) {
+                case 'danger':
+                    this.dangerType = true;
+                    break;
+                case 'warning':
+                    this.warningType = true;
+                    break;
+                case 'info':
+                    this.infoType = true;
+                    break;
+                default:
+                    this.successType = true;
+            }
+        }
+     }"
+     x-init="init()"
+     x-ref="alert"
+     data-type={alertType}
+     class="alert-container">
+    <div class="flex items-start gap-4 p-4 mb-4 rounded alert-content border">
+        <div x-show="successType === true">
+            <Success class="w-6 h-6" />
+        </div>
+        <div x-show="dangerType === true">
+            <Danger class="w-6 h-6" />
+        </div>
+        <div x-show="warningType === true">
+            <Warning class="w-6 h-6" />
+        </div>
+        <div x-show="infoType === true">
+            <Info class="w-6 h-6" />
+        </div>
+        <div class="flex-1">
+            <div class="font-bold">{title}</div>
+            <div>{message}</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    [data-type="success"] > .alert-content {
+        @apply bg-green-50 border-green-600 text-green-700;
+    }
+
+    [data-type="danger"] > .alert-content {
+        @apply bg-red-50 border-red-600 text-red-700;
+    }
+
+    [data-type="warning"] > .alert-content {
+        @apply bg-orange-50 border-orange-600 text-orange-700;
+    }
+
+    [data-type="info"] > .alert-content {
+        @apply bg-blue-50 border-blue-600 text-blue-700;
+    }
+</style>
