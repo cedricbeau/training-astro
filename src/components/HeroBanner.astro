@@ -1,0 +1,31 @@
+---
+const { "data-position": position, src, alt, width, height, title, body, linkHref, linkTitle, linkLabel } = Astro.props;
+---
+
+<div class="relative"
+     data-position={position}>
+    <img src={src}
+         alt={alt}
+         width={width}
+         height={height}
+         class="block max-w-full h-auto">
+    <div class="hero-banner-container absolute inset-0 flex flex-col justify-center p-8 bg-black bg-opacity-45 text-white text-center">
+        <div class="text-2xl font-bold">{title}</div>
+        <div class="mt-6 mb-8 text-lg">{body}</div>
+        <a href={linkHref} title={linkTitle} class="w-fit py-1.5 px-4 bg-slate-100 text-lg  text-slate-700 rounded-sm">{linkLabel}</a>
+    </div>
+</div>
+
+<style>
+    [data-position="center"] > .hero-banner-container {
+        @apply items-center text-center;
+    }
+
+    [data-position="start"] > .hero-banner-container {
+        @apply items-start text-start;
+    }
+
+    [data-position="end"] > .hero-banner-container {
+        @apply items-end text-end;
+    }
+</style>

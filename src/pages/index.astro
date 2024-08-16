@@ -1,9 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Slideshow from '@components/Slideshow.astro';
-import HeroBannerLeft from '@components/HeroBannerLeft.astro';
-import HeroBannerRight from '@components/HeroBannerRight.astro';
-import HeroBannerCenter from '@components/HeroBannerCenter.astro';
+import HeroBanner from '@components/HeroBanner.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
 import ComponentList from '@components/ComponentList.astro';
 import Accordion from '@components/Accordion.astro';
@@ -24,39 +22,42 @@ import PanelRight from '@components/PanelRight.astro';
         </ComponentContainer>
 
         <ComponentContainer id="herobannerleft" title="Hero Banner Left">
-            <HeroBannerLeft src="./images/unsplash-daniel-sessler-1024.jpg"
-                            alt="Paysage de Daniel Sessler"
-                            width="1024"
-                            height="683"
-                            title="Lorem ipsum"
-                            body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                            linkHref="#"
-                            linkTitle="Lien"
-                            linkLabel="Lien" />
+            <HeroBanner data-position="start"
+                        src="./images/unsplash-anthony-tuil-1024.jpg"
+                        alt="Paysage de Anthony Tuil"
+                        width="1024"
+                        height="683"
+                        title="Lorem ipsum"
+                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                        linkHref="#"
+                        linkTitle="Lien"
+                        linkLabel="Lien" />
         </ComponentContainer>
 
         <ComponentContainer id="herobannerright" title="Hero Banner Right">
-            <HeroBannerRight src="./images/unsplash-bob-brewer-1024.jpg"
-                             alt="Paysage de Bob Brewer"
-                             width="1024"
-                             height="683"
-                             title="Lorem ipsum"
-                             body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                             linkHref="#"
-                             linkTitle="Lien"
-                             linkLabel="Lien" />
+            <HeroBanner data-position="end"
+                        src="./images/unsplash-anthony-tuil-1024.jpg"
+                        alt="Paysage de Anthony Tuil"
+                        width="1024"
+                        height="683"
+                        title="Lorem ipsum"
+                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                        linkHref="#"
+                        linkTitle="Lien"
+                        linkLabel="Lien" />
         </ComponentContainer>
 
         <ComponentContainer id="herobannercenter" title="Hero Banner Center">
-            <HeroBannerCenter src="./images/unsplash-anthony-tuil-1024.jpg"
-                              alt="Paysage de Anthony Tuil"
-                              width="1024"
-                              height="683"
-                              title="Lorem ipsum"
-                              body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                              linkHref="#"
-                             linkTitle="Lien"
-                             linkLabel="Lien" />
+            <HeroBanner data-position="center"
+                        src="./images/unsplash-anthony-tuil-1024.jpg"
+                        alt="Paysage de Anthony Tuil"
+                        width="1024"
+                        height="683"
+                        title="Lorem ipsum"
+                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                        linkHref="#"
+                        linkTitle="Lien"
+                        linkLabel="Lien" />
         </ComponentContainer>
 
         <ComponentContainer id="accordion" title="Accordion">
