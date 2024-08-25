@@ -4,7 +4,7 @@
 <div class="steps sk5-text-sm@md" aria-label="Multi-step indicator">
     <ol class="steps__list">
         <li class="step step--completed">
-            <a class="step__label" href="#0">Cart <span class="sr-only">- step completed</span></a>
+            <a class="step__label" href="#0">Step 1 <span class="sr-only">- step completed</span></a>
 
             <span class="step__separator" aria-hidden="true">
                 <svg class="sk5-icon" viewBox="0 0 16 16"><polyline fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="6.5,3.5 11,8 6.5,12.5 "></polyline></svg>
@@ -16,7 +16,7 @@
         </li>
 
         <li class="step step--current">
-            <a class="step__label">Delivery <span class="sr-only">- current step</span></a>
+            <a class="step__label">Step 2 <span class="sr-only">- current step</span></a>
 
             <span class="step__separator" aria-hidden="true">
                 <svg class="sk5-icon" viewBox="0 0 16 16"><polyline fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="6.5,3.5 11,8 6.5,12.5 "></polyline></svg>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="step">
-            <a class="step__label">Billing</a>
+            <a class="step__label">Step 3</a>
 
             <span class="step__separator" aria-hidden="true">
                 <svg class="sk5-icon" viewBox="0 0 16 16"><polyline fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="6.5,3.5 11,8 6.5,12.5 "></polyline></svg>
@@ -36,7 +36,7 @@
         </li>
 
         <li class="step">
-            <a class="step__label">Review</a>
+            <a class="step__label">Step 4</a>
 
             <div class="step__circle" aria-hidden="true">4</div>
         </li>
@@ -112,20 +112,18 @@
 }
 
 .step__label {
-    @apply inline-block no-underline;
+    @apply inline-block text-slate-400 no-underline;
     margin-top: calc(var(--sk5-space-2xs) + var(--step-circle-size)/2);
-    color: inherit;
 }
 
 .step--completed .step__label,
 .step--current .step__label {
-  color: hsl(var(--sk5-color-primary-hsl));
+  @apply text-slate-800;
 }
 
 .step--completed .step__circle,
 .step--current .step__circle {
-    background-color: hsl(var(--sk5-color-primary-hsl));
-    color: hsl(var(--sk5-color-white-hsl));
+    @apply text-white bg-slate-800;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -135,17 +133,16 @@
 }
 
 .step--completed .step__separator {
-    background-color: hsl(var(--sk5-color-primary-hsl));
+    @apply bg-slate-800;
 }
 
 .step__separator {
-    @apply absolute overflow-hidden inline-block align-middle text-transparent whitespace-nowrap;
+    @apply absolute overflow-hidden inline-block align-middle text-transparent whitespace-nowrap bg-slate-300;
 
     top: calc(var(--step-separator-line-stroke) * -1/2);
     left: calc(50% + var(--step-circle-size)/2 + var(--step-separator-line-gap));
     height: var(--step-separator-line-stroke);
     width: calc(100% - var(--step-circle-size) - var(--step-separator-line-gap)*2);
-    background-color: hsl(var(--sk5-color-contrast-lower-hsl));
 }
 
 .step__separator .sk5-icon {
@@ -153,10 +150,9 @@
 }
 
 .step__circle {
-    @apply absolute flex justify-center items-center text-base leading-8 w-8 h-8 rounded-full;
+    @apply absolute flex justify-center items-center text-base leading-8 w-8 h-8 rounded-full bg-slate-300;
     left: calc(50% - var(--step-circle-size)/2);
     top: calc(var(--step-circle-size) * -1/2);
-    background-color: hsl(var(--sk5-color-contrast-lower-hsl));
 }
 
 .step__circle .sk5-icon {
