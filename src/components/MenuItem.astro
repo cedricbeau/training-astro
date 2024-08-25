@@ -1,0 +1,24 @@
+---
+import ChevronDown from 'astro-heroicons/outline/ChevronDown.astro';
+const { href, title, customLinkClass, linkClass, customLiClass, content, hasChildren } = Astro.props;
+---
+
+<li class=`lg:relative group w-full lg:w-auto border-b border-slate-500 last:border-0 lg:border-0 ${ customLiClass }`>
+	<a href={href}
+       title={title}
+       class=`link flex items-center p-4 lg:p-0 text-slate-500 transition-colors ${ customLinkClass } ${ linkClass }`>
+       {content}
+       {
+        hasChildren && (
+            <ChevronDown class="hidden lg:block w-4 h-4 ml-2 mt-1 transition-transform"/>
+        )
+       }
+    </a>
+    <slot />
+</li>
+
+<style>
+    li:hover a > svg {
+        transform: scaleY(-1);
+    }
+</style>

@@ -1,0 +1,99 @@
+---
+import NavigationItem from '@components/MenuItem.astro';
+
+const navigation = [
+    {
+        url: '#',
+        text: 'Enter 1',
+        linkClass: 'enter-1',
+        children: [
+            {
+                url: '#',
+                text: 'Subenter 1',
+                linkClass: 'subenter-1',
+            },
+            {
+                url: '#',
+                text: 'Subenter 2',
+                linkClass: 'subenter-2',
+            },
+            {
+                url: '#',
+                text: 'Subenter 3',
+                linkClass: 'subenter-3',
+            }
+        ]
+    },
+    {
+        url: '#',
+        text: 'Enter 2',
+        linkClass: 'enter-2',
+    },
+    {
+        url: '#',
+        text: 'Enter 3',
+        linkClass: 'enter-3',
+    },
+];
+
+---
+
+<nav class="nav-header">
+    <ul class="nav-header-level-0 flex flex-col lg:flex-row">
+        {
+            navigation.map(item => (
+                <NavigationItem
+                    href={ item.url }
+                    title={ item.text }
+                    customLinkClass="link-level-0 lg:py-2 lg:px-6 hover:text-sky-500"
+                    linkClass={ item.linkClass }
+                    content={ item.text }
+                    hasChildren={item.children}
+                >
+                    {
+                        item.children && Array.isArray(item.children) && (
+                            <ul class="lg:group-hover:block lg:hidden lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:w-36 lg:bg-white lg:rounded-sm lg:shadow border-t border-slate-500 lg:border-0">
+                                {
+                                    item.children.map(child => (
+                                        <NavigationItem
+                                            href={ child.url }
+                                            title={ child.text }
+                                            customLiClass="lg:border-b lg:border-slate-300"
+                                            customLinkClass="text-base px-10 lg:p-4 lg:text-slate-600 hover:text-sky-500"
+                                            linkClass={ child.linkClass }
+                                            content={ child.text }
+                                        />
+                                    ))
+                                }
+                            </ul>
+                        )
+                    }
+                </NavigationItem>
+            ))
+        }
+    </ul>
+</nav>
+
+<style is:global>
+.nav-header a + ul {
+    animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 70%;
+    }
+
+    99% {
+        opacity: 1;
+        top: 100%;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+        top: 100%;
+    }
+}
+</style>

@@ -1,17 +1,19 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Slideshow from '@components/Slideshow.astro';
-import HeroBanner from '@components/HeroBanner.astro';
+import Accordion from '@components/Accordion.astro';
+import Alert from '@components/Alert.astro';
+import Avatar from '@components/Avatar.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
 import ComponentsList from '@components/ComponentsList.astro';
-import Accordion from '@components/Accordion.astro';
-import Tabz from '@components/Tabz.astro';
+import HeroBanner from '@components/HeroBanner.astro';
+import Layout from '@layouts/Layout.astro';
 import Modal from '@components/Modal.astro';
+import Menu from '@components/Menu.astro';
 import PanelLeft from '@components/PanelLeft.astro';
 import PanelRight from '@components/PanelRight.astro';
-import Alert from '@components/Alert.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import Avatar from '@components/Avatar.astro';
+import Slideshow from '@components/Slideshow.astro';
+import Tabz from '@components/Tabz.astro';
+
 ---
 
 <Layout title="Astro training">
@@ -81,6 +83,9 @@ import Avatar from '@components/Avatar.astro';
                         linkHref="#"
                         linkTitle="Lien"
                         linkLabel="Lien" />
+        </ComponentContainer>
+        <ComponentContainer id="menu" title="Menu">
+            <Menu />
         </ComponentContainer>
         <ComponentContainer id="modal" title="Modal">
             <Modal />
