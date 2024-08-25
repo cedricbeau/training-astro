@@ -10,6 +10,7 @@ import Modal from '@components/Modal.astro';
 import PanelLeft from '@components/PanelLeft.astro';
 import PanelRight from '@components/PanelRight.astro';
 import Alert from '@components/Alert.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 ---
 
 <Layout title="Astro training">
@@ -37,6 +38,9 @@ import Alert from '@components/Alert.astro';
             <Alert data-type="info"
                    title="Info !"
                    message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+        </ComponentContainer>
+        <ComponentContainer id="breadcrumbs" title="Breadcrumbs">
+            <Breadcrumbs />
         </ComponentContainer>
         <ComponentContainer id="herobannercenter" title="Hero Banner Center">
             <HeroBanner data-position="center"
