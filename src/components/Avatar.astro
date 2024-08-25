@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import myImage from '../assets/avatar.jpg';
+---
+
+<Image
+    src={myImage}
+    width="400"
+    height="400"
+    alt="Avatar"
+    class="w-20 h-20 xl:w-28 xl:h-28 rounded-full shadow-xl" />
+
