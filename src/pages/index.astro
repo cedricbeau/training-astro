@@ -18,6 +18,9 @@ import Alert from '@components/Alert.astro';
         <ComponentsList />
     </div>
     <main class="max-w-5xl ml-80 p-8">
+        <ComponentContainer id="accordion" title="Accordion">
+            <Accordion />
+        </ComponentContainer>
         <ComponentContainer id="alert" title="Alert">
             <Alert data-type="success"
                    title="Success !"
@@ -35,37 +38,6 @@ import Alert from '@components/Alert.astro';
                    title="Info !"
                    message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
         </ComponentContainer>
-
-        <ComponentContainer id="slideshow" title="Slideshow">
-            <Slideshow />
-        </ComponentContainer>
-
-        <ComponentContainer id="herobannerleft" title="Hero Banner Left">
-            <HeroBanner data-position="start"
-                        src="./images/unsplash-anthony-tuil-1024.jpg"
-                        alt="Paysage de Anthony Tuil"
-                        width="1024"
-                        height="683"
-                        title="Lorem ipsum"
-                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                        linkHref="#"
-                        linkTitle="Lien"
-                        linkLabel="Lien" />
-        </ComponentContainer>
-
-        <ComponentContainer id="herobannerright" title="Hero Banner Right">
-            <HeroBanner data-position="end"
-                        src="./images/unsplash-anthony-tuil-1024.jpg"
-                        alt="Paysage de Anthony Tuil"
-                        width="1024"
-                        height="683"
-                        title="Lorem ipsum"
-                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                        linkHref="#"
-                        linkTitle="Lien"
-                        linkLabel="Lien" />
-        </ComponentContainer>
-
         <ComponentContainer id="herobannercenter" title="Hero Banner Center">
             <HeroBanner data-position="center"
                         src="./images/unsplash-anthony-tuil-1024.jpg"
@@ -78,25 +50,45 @@ import Alert from '@components/Alert.astro';
                         linkTitle="Lien"
                         linkLabel="Lien" />
         </ComponentContainer>
-
-        <ComponentContainer id="accordion" title="Accordion">
-            <Accordion />
+        <ComponentContainer id="herobannerleft" title="Hero Banner Left">
+            <HeroBanner data-position="start"
+                        src="./images/unsplash-anthony-tuil-1024.jpg"
+                        alt="Paysage de Anthony Tuil"
+                        width="1024"
+                        height="683"
+                        title="Lorem ipsum"
+                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                        linkHref="#"
+                        linkTitle="Lien"
+                        linkLabel="Lien" />
         </ComponentContainer>
-
+        <ComponentContainer id="herobannerright" title="Hero Banner Right">
+            <HeroBanner data-position="end"
+                        src="./images/unsplash-anthony-tuil-1024.jpg"
+                        alt="Paysage de Anthony Tuil"
+                        width="1024"
+                        height="683"
+                        title="Lorem ipsum"
+                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                        linkHref="#"
+                        linkTitle="Lien"
+                        linkLabel="Lien" />
+        </ComponentContainer>
+        <ComponentContainer id="modal" title="Modal">
+            <Modal />
+        </ComponentContainer>
+        <ComponentContainer id="panelleft" title="Panel Left">
+            <PanelLeft />
+        </ComponentContainer>
+        <ComponentContainer id="panelright" title="Panel Right">
+            <PanelRight />
+        </ComponentContainer>
+        <ComponentContainer id="slideshow" title="Slideshow">
+            <Slideshow />
+        </ComponentContainer>
         <ComponentContainer id="tabz" title="Tabz">
             <Tabz />
         </ComponentContainer>
 
-        <ComponentContainer id="modal" title="Modal">
-            <Modal />
-        </ComponentContainer>
-
-        <ComponentContainer id="panelleft" title="Panel Left">
-            <PanelLeft />
-        </ComponentContainer>
-
-        <ComponentContainer id="panelright" title="Panel Right">
-            <PanelRight />
-        </ComponentContainer>
     </main>
 </Layout>
