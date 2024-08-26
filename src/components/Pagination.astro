@@ -1,0 +1,28 @@
+---
+import Button from '@components/PaginationButton.astro';
+import Next from 'astro-heroicons/outline/ChevronRight.astro';
+import Prev from 'astro-heroicons/outline/ChevronLeft.astro';
+---
+
+<div x-data="{
+        currentPage: 0,
+        paginationLength: 20
+     }"
+     class="flex justify-between items-center mt-6 md:mt-8 lg:mt-10">
+    <Button @click="currentPage--"
+            aria-label="Précédent"
+            :class="currentPage === 0 ?">
+            <Prev class="w-4 h-4 text-current" />Prev
+    </Button>
+    <div class="flex items-center gap-x-2">
+        <span x-text="currentPage + 1" class="text-sm"></span>
+        <span class="text-slate-300">/</span>
+        <span class="text-sm" x-text="paginationLength"></span>
+    </div>
+
+    <Button @click="currentPage++"
+            aria-label="Suivant"
+            :class="currentPage === paginationLength - 1 ?">
+            Next <Next class="w-4 h-4 text-current" />
+    </Button>
+</div>
