@@ -19,7 +19,6 @@ import Prev from 'astro-heroicons/outline/ChevronLeft.astro';
         <span class="text-slate-300">/</span>
         <span class="text-sm" x-text="paginationLength"></span>
     </div>
-
     <Button @click="currentPage++"
             aria-label="Suivant"
             :class="currentPage === paginationLength - 1 ?">
