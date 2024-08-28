@@ -2,20 +2,49 @@
 import ComponentListItem from "./ComponentListItem.astro"
 ---
 <ul>
-    <ComponentListItem href="#accordion" title="Accordion"/>
-    <ComponentListItem href="#alert" title="Alert"/>
-    <ComponentListItem href="#avatar" title="Avatar"/>
-    <ComponentListItem href="#breadcrumbs" title="Breadcrumbs"/>
-    <ComponentListItem href="#herobannercenter" title="Hero Banner Center"/>
-    <ComponentListItem href="#herobannerleft" title="Hero Banner Left"/>
-    <ComponentListItem href="#herobannerright" title="Hero Banner Right"/>
-    <ComponentListItem href="#menu" title="Menu"/>
-    <ComponentListItem href="#modal" title="Modal"/>
-    <ComponentListItem href="#pagination" title="Pagination"/>
-    <ComponentListItem href="#panelleft" title="Panel Left"/>
-    <ComponentListItem href="#panelright" title="Panel Right"/>
-    <ComponentListItem href="#slideshow" title="Slideshow"/>
-    <ComponentListItem href="#steps" title="Steps"/>
-    <ComponentListItem href="#tabz" title="Tabz"/>
-    <ComponentListItem href="#timeline" title="Timeline"/>
+    <li class="mb-4">
+        <a href="/actions" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Actions</a>
+        <ul>
+            <ComponentListItem href="/actions#modal" title="Modal"/>
+        </ul>
+    </li>
+    <li class="mb-4">
+        <a href="/data-display" title="" class="block font-semibold text-slate-500 uppercase border-b border-slate-600">Data display</a>
+        <ul>
+            <ComponentListItem href="/data-display#accordion" title="Accordion"/>
+            <ComponentListItem href="/data-display#avatar" title="Avatar"/>
+            <ComponentListItem href="/data-display#slideshow" title="Slideshow"/>
+            <ComponentListItem href="/data-display#tabz" title="Tabz"/>
+            <ComponentListItem href="/data-display#timeline" title="Timeline"/>
+        </ul>
+    </li>
+    <li class="mb-4">
+        <a href="/navigation" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Navigation</a>
+        <ul>
+            <ComponentListItem href="/navigation#breadcrumbs" title="Breadcrumbs"/>
+            <ComponentListItem href="/navigation#menu" title="Menu"/>
+            <ComponentListItem href="/navigation#pagination" title="Pagination"/>
+            <ComponentListItem href="/navigation#steps" title="Steps"/>
+        </ul>
+    </li>
+    <li class="mb-4">
+        <a href="/feedback" title="" class="block font-semibold text-slate-500 uppercase border-b border-slate-600">Feedback</a>
+        <ul>
+            <ComponentListItem href="/feedback#alert" title="Alert"/>
+        </ul>
+    </li>
+    <li class="mb-4">
+        <a href="/data-input" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Data input</a>
+        <ul></ul>
+    </li>
+    <li class="mb-4">
+        <a href="/layout" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Layout</a>
+        <ul>
+            <ComponentListItem href="/layout#herobannercenter" title="Hero Banner Center"/>
+            <ComponentListItem href="/layout##herobannerleft" title="Hero Banner Left"/>
+            <ComponentListItem href="/layout##herobannerright" title="Hero Banner Right"/>
+            <ComponentListItem href="/layout##panelleft" title="Panel Left"/>
+            <ComponentListItem href="/layout##panelright" title="Panel Right"/>
+        </ul>
+    </li>
 </ul>

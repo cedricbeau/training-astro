@@ -1,0 +1,52 @@
+---
+import ComponentContainer from '@components/ComponentContainer.astro';
+import HeroBanner from '@components/HeroBanner.astro';
+import Layout from '@layouts/Layout.astro';
+import PanelLeft from '@components/PanelLeft.astro';
+import PanelRight from '@components/PanelRight.astro';
+---
+
+<Layout title="Layout">
+    <ComponentContainer id="herobannercenter" title="Hero Banner Center">
+        <HeroBanner data-position="center"
+                    src="./images/unsplash-anthony-tuil-1024.jpg"
+                    alt="Paysage de Anthony Tuil"
+                    width="1024"
+                    height="683"
+                    title="Lorem ipsum"
+                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                    linkHref="#"
+                    linkTitle="Lien"
+                    linkLabel="Lien" />
+    </ComponentContainer>
+    <ComponentContainer id="herobannerleft" title="Hero Banner Left">
+        <HeroBanner data-position="start"
+                    src="./images/unsplash-anthony-tuil-1024.jpg"
+                    alt="Paysage de Anthony Tuil"
+                    width="1024"
+                    height="683"
+                    title="Lorem ipsum"
+                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                    linkHref="#"
+                    linkTitle="Lien"
+                    linkLabel="Lien" />
+    </ComponentContainer>
+    <ComponentContainer id="herobannerright" title="Hero Banner Right">
+        <HeroBanner data-position="end"
+                    src="./images/unsplash-anthony-tuil-1024.jpg"
+                    alt="Paysage de Anthony Tuil"
+                    width="1024"
+                    height="683"
+                    title="Lorem ipsum"
+                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
+                    linkHref="#"
+                    linkTitle="Lien"
+                    linkLabel="Lien" />
+    </ComponentContainer>
+    <ComponentContainer id="panelleft" title="Panel Left">
+        <PanelLeft />
+    </ComponentContainer>
+    <ComponentContainer id="panelright" title="Panel Right">
+        <PanelRight />
+    </ComponentContainer>
+</Layout>

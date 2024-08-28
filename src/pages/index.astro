@@ -1,119 +1,26 @@
 ---
-import Accordion from '@components/Accordion.astro';
-import Alert from '@components/Alert.astro';
-import Avatar from '@components/Avatar.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import ComponentContainer from '@components/ComponentContainer.astro';
-import ComponentsList from '@components/ComponentsList.astro';
-import HeroBanner from '@components/HeroBanner.astro';
 import Layout from '@layouts/Layout.astro';
-import Modal from '@components/Modal.astro';
-import Menu from '@components/Menu.astro';
-import Pagination from '@components/Pagination.astro';
-import PanelLeft from '@components/PanelLeft.astro';
-import PanelRight from '@components/PanelRight.astro';
-import Slideshow from '@components/Slideshow.astro';
-import Steps from '@components/Steps.astro';
-import Tabz from '@components/Tabz.astro';
-import Timeline from '@components/Timeline.astro';
-
 ---
 
-<Layout title="Astro training">
-    <div class="fixed top-0 bottom-0 left-0 overflow-y-auto w-80 p-8 bg-slate-900 text-slate-100">
-        <h1 class="mb-8 text-2xl font-bold">Composants</h1>
-        <ComponentsList />
-    </div>
-    <main class="max-w-5xl ml-80 p-8">
-        <ComponentContainer id="accordion" title="Accordion">
-            <Accordion />
-        </ComponentContainer>
-        <ComponentContainer id="alert" title="Alert">
-            <Alert data-type="success"
-                   title="Success !"
-                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
-
-            <Alert data-type="danger"
-                   title="Danger !"
-                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
-
-            <Alert data-type="warning"
-                   title="Warning !"
-                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
-
-            <Alert data-type="info"
-                   title="Info !"
-                   message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
-        </ComponentContainer>
-        <ComponentContainer id="avatar" title="Avatar">
-            <Avatar />
-        </ComponentContainer>
-        <ComponentContainer id="breadcrumbs" title="Breadcrumbs">
-            <Breadcrumbs />
-        </ComponentContainer>
-        <ComponentContainer id="herobannercenter" title="Hero Banner Center">
-            <HeroBanner data-position="center"
-                        src="./images/unsplash-anthony-tuil-1024.jpg"
-                        alt="Paysage de Anthony Tuil"
-                        width="1024"
-                        height="683"
-                        title="Lorem ipsum"
-                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                        linkHref="#"
-                        linkTitle="Lien"
-                        linkLabel="Lien" />
-        </ComponentContainer>
-        <ComponentContainer id="herobannerleft" title="Hero Banner Left">
-            <HeroBanner data-position="start"
-                        src="./images/unsplash-anthony-tuil-1024.jpg"
-                        alt="Paysage de Anthony Tuil"
-                        width="1024"
-                        height="683"
-                        title="Lorem ipsum"
-                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                        linkHref="#"
-                        linkTitle="Lien"
-                        linkLabel="Lien" />
-        </ComponentContainer>
-        <ComponentContainer id="herobannerright" title="Hero Banner Right">
-            <HeroBanner data-position="end"
-                        src="./images/unsplash-anthony-tuil-1024.jpg"
-                        alt="Paysage de Anthony Tuil"
-                        width="1024"
-                        height="683"
-                        title="Lorem ipsum"
-                        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit."
-                        linkHref="#"
-                        linkTitle="Lien"
-                        linkLabel="Lien" />
-        </ComponentContainer>
-        <ComponentContainer id="menu" title="Menu">
-            <Menu />
-        </ComponentContainer>
-        <ComponentContainer id="modal" title="Modal">
-            <Modal />
-        </ComponentContainer>
-        <ComponentContainer id="pagination" title="Pagination">
-            <Pagination />
-        </ComponentContainer>
-        <ComponentContainer id="panelleft" title="Panel Left">
-            <PanelLeft />
-        </ComponentContainer>
-        <ComponentContainer id="panelright" title="Panel Right">
-            <PanelRight />
-        </ComponentContainer>
-        <ComponentContainer id="slideshow" title="Slideshow">
-            <Slideshow />
-        </ComponentContainer>
-        <ComponentContainer id="steps" title="Steps">
-            <Steps />
-        </ComponentContainer>
-        <ComponentContainer id="tabz" title="Tabz">
-            <Tabz />
-        </ComponentContainer>
-        <ComponentContainer id="timeline" title="Timeline">
-            <Timeline />
-        </ComponentContainer>
-
-    </main>
+<Layout title="Composants">
+    <ul class="grid grid-cols-3 gap-6">
+        <li>
+            <a href="/actions" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Actions</a>
+        </li>
+        <li>
+            <a href="/data-display" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Data display</a>
+        </li>
+        <li>
+            <a href="/navigation" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Navigation</a>
+        </li>
+        <li>
+            <a href="/feedback" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Feedback</a>
+        </li>
+        <li>
+            <a href="/data-input" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Data-input</a>
+        </li>
+        <li>
+            <a href="/layout" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Layout</a>
+        </li>
+    </ul>
 </Layout>

@@ -1,0 +1,23 @@
+---
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import ComponentContainer from '@components/ComponentContainer.astro';
+import Layout from '@layouts/Layout.astro';
+import Menu from '@components/Menu.astro';
+import Pagination from '@components/Pagination.astro';
+import Steps from '@components/Steps.astro';
+---
+
+<Layout title="Navigation">
+    <ComponentContainer id="breadcrumbs" title="Breadcrumbs">
+        <Breadcrumbs />
+    </ComponentContainer>
+    <ComponentContainer id="menu" title="Menu">
+        <Menu />
+    </ComponentContainer>
+    <ComponentContainer id="pagination" title="Pagination">
+        <Pagination />
+    </ComponentContainer>
+    <ComponentContainer id="steps" title="Steps">
+        <Steps />
+    </ComponentContainer>
+</Layout>
