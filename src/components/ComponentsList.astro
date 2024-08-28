@@ -1,15 +1,16 @@
 ---
+import ComponentListSectionTitle from "./ComponentListSectionTitle.astro"
 import ComponentListItem from "./ComponentListItem.astro"
 ---
 <ul>
     <li class="mb-4">
-        <a href="/actions" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Actions</a>
+        <ComponentListSectionTitle href="/actions" title="Actions" label="Actions" />
         <ul>
             <ComponentListItem href="/actions#modal" title="Modal"/>
         </ul>
     </li>
     <li class="mb-4">
-        <a href="/data-display" title="" class="block font-semibold text-slate-500 uppercase border-b border-slate-600">Data display</a>
+        <ComponentListSectionTitle href="/data-display" title="Data display" label="Data display" />
         <ul>
             <ComponentListItem href="/data-display#accordion" title="Accordion"/>
             <ComponentListItem href="/data-display#avatar" title="Avatar"/>
@@ -19,7 +20,7 @@ import ComponentListItem from "./ComponentListItem.astro"
         </ul>
     </li>
     <li class="mb-4">
-        <a href="/navigation" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Navigation</a>
+        <ComponentListSectionTitle href="/navigation" title="Navigation" label="Navigation" />
         <ul>
             <ComponentListItem href="/navigation#breadcrumbs" title="Breadcrumbs"/>
             <ComponentListItem href="/navigation#menu" title="Menu"/>
@@ -28,17 +29,17 @@ import ComponentListItem from "./ComponentListItem.astro"
         </ul>
     </li>
     <li class="mb-4">
-        <a href="/feedback" title="" class="block font-semibold text-slate-500 uppercase border-b border-slate-600">Feedback</a>
+        <ComponentListSectionTitle href="/feedback" title="Feedback" label="Feedback" />
         <ul>
             <ComponentListItem href="/feedback#alert" title="Alert"/>
         </ul>
     </li>
     <li class="mb-4">
-        <a href="/data-input" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Data input</a>
+        <ComponentListSectionTitle href="/data-input" title="Data input" label="Data input" />
         <ul></ul>
     </li>
     <li class="mb-4">
-        <a href="/layout" title="" class="block mb-2 font-semibold text-slate-500 uppercase border-b border-slate-600">Layout</a>
+        <ComponentListSectionTitle href="/layout" title="Layout" label="Layout" />
         <ul>
             <ComponentListItem href="/layout#herobannercenter" title="Hero Banner Center"/>
             <ComponentListItem href="/layout##herobannerleft" title="Hero Banner Left"/>

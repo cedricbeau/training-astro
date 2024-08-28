@@ -2,7 +2,7 @@
 const {id, title} = Astro.props;
 ---
 
-<div id={id} class="mb-8 pb-8 border-b border-slate-200">
-    <h2 class="mb-4 text-lg font-semibold">{title}</h2>
+<div id={id} class="mb-16">
+    <h2 class="mb-4 p-4 text-lg font-semibold bg-slate-200 rounded">{title}</h2>
     <slot />
 </div>
