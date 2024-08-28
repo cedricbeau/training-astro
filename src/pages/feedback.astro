@@ -2,6 +2,7 @@
 import Alert from '@components/Alert.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
 import Layout from '@layouts/Layout.astro';
+import Loading from '@components/Loading.astro';
 ---
 
 <Layout title="Feedback">
@@ -21,5 +22,8 @@ import Layout from '@layouts/Layout.astro';
         <Alert data-type="info"
                 title="Info !"
                 message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore quo, aut pariatur ipsa natus illo nihil nesciunt minima? Eum nulla qui assumenda, consequatur obcaecati sunt dolor quos nisi suscipit." />
+    </ComponentContainer>
+    <ComponentContainer id="loading" title="Loading">
+        <Loading />
     </ComponentContainer>
 </Layout>
