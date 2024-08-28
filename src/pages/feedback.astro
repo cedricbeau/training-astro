@@ -3,6 +3,7 @@ import Alert from '@components/Alert.astro';
 import ComponentContainer from '@components/ComponentContainer.astro';
 import Layout from '@layouts/Layout.astro';
 import Loading from '@components/Loading.astro';
+import Progress from '@components/Progress.astro';
 ---
 
 <Layout title="Feedback">
@@ -25,5 +26,8 @@ import Loading from '@components/Loading.astro';
     </ComponentContainer>
     <ComponentContainer id="loading" title="Loading">
         <Loading />
+    </ComponentContainer>
+    <ComponentContainer id="progress" title="Progress">
+        <Progress />
     </ComponentContainer>
 </Layout>
