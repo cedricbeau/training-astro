@@ -1,26 +1,21 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import SectionLink from '@components/SectionLink.astro';
+import sections from '@datas/sections';
 ---
 
 <Layout title="Composants">
     <ul class="grid grid-cols-3 gap-6">
-        <li>
-            <a href="/actions" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Actions</a>
-        </li>
-        <li>
-            <a href="/data-display" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Data display</a>
-        </li>
-        <li>
-            <a href="/navigation" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Navigation</a>
-        </li>
-        <li>
-            <a href="/feedback" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Feedback</a>
-        </li>
-        <li>
-            <a href="/data-input" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Data-input</a>
-        </li>
-        <li>
-            <a href="/layout" class="flex justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow transition-shadow">Layout</a>
-        </li>
+        {
+            sections.map((item, index) => (
+                <li>
+                    <SectionLink
+                        href={ item.href }
+                        title={ item.title }
+                        label={ item.label }
+                    />
+                </li>
+            ))
+        }
     </ul>
 </Layout>
